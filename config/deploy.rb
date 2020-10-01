@@ -4,7 +4,6 @@ lock "~> 3.14.1"
 set :application, "GAJDA2020"
 set :scm, :none
 set :repository, "."
-set :deploy_via, :copy
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
