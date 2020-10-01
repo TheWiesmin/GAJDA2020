@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "GAJDA2020"
-set :repo_url, "git@github.com:username/myapp.git"
+set :repo_url, "git@github.com:TheWiesmin/GAJDA2020.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
