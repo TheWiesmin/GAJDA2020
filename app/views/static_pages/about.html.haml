@@ -1,0 +1,60 @@
+%html{lang: "pl"}
+  %head
+    %title GAJDA2020
+    %meta{charset: "UTF-8"}
+    %meta{author: "Gerard Gajda"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+
+    %link{rel: 'stylesheet', href: 'https://unpkg.com/aos@2.3.1/dist/aos.css'}
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'static_pages', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tag
+
+  %body
+    #logo
+
+    #cover
+
+    #mySidenav.sidenav
+      %a.closebtn{href: "javascript:void(0)", onclick: "closeNav()"} &times;
+      = link_to "Strona Główna", "/"
+      = link_to "O mnie", "o-mnie"
+      = link_to "Aktualności", "aktualnosci"
+
+    %span#menuopen{onclick: "openNav()"} &#9776;
+
+    .container
+      .jumbotron#header{"data-aos" => "zoom-in-up"}
+        Naprzód Szkoło!
+
+    %button#top{onclick: "topFunction()"}
+      %i.fas.fa-arrow-up
+
+    #aboutme
+      Nazywam się Albert Gajda i jestem uczniem klasy 7a.
+      [...]
+    #contests
+      %span#opis{"data-aos" => "flip-down", "data-aos-duration" => "2000"}
+        25 WRZEŚNIA GŁOSUJ NA ALBERTA GAJDĘ
+
+      #footer
+        &COPY; COPYRIGHT Gerard Gajda 2020
+
+    :javascript
+      function topFunction(){
+        document.getElementById("logo").classList.remove("sticky");
+        document.getElementById("top").style.display = "none";
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }

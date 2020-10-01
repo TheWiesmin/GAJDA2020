@@ -1,0 +1,195 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.sass.
+// You can use Sass here: https://sass-lang.com/
+
+@font-face
+  font-family: 'DancingScript'
+  src: font-url('dancingscript.woff') format("woff"), font-url('dancingscript.woff2') format("woff2")
+  font-weight: 700
+  font-style: normal
+
+body, html
+  height: 100%
+
+#logo
+  position: absolute
+  left: 0
+  top: 50%
+  width: 100%
+  text-align: center
+  background-image: image_url("logo.png")
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+  height: 20vh
+  z-index: 96
+
+#cover
+  background: image_url("bg.png")
+  min-height: 100%
+  -moz-background-size: 100%
+  -webkit-background-size: 100%
+  -o-background-size: 100%
+  color: white
+  margin-bottom: 3vh
+  //paralaksa
+  background-attachment: fixed
+  background-position: left
+  background-repeat: no-repeat
+  background-size: cover
+
+#content
+  word-wrap: break-word
+
+#opis
+  font-family: Impact !important
+  color: #144085
+  font-size: 5em
+  text-align: center
+  margin-top: 1em
+  margin-bottom: 1em
+
+#top
+  height: 2.5em
+  width: 2.5em
+  text-align: center
+  display: none /* Hidden by default */
+  position: fixed /* Fixed/sticky position */
+  bottom: 1.25em /* Place the button at the bottom of the page */
+  right: 1.875em /* Place the button 30px from the right */
+  z-index: 99 /* Make sure it does not overlap */
+  border: none /* Remove borders */
+  outline: none /* Remove outline */
+  background-color: #1b1e21 /* Set a background color */
+  color: white /* Set arrow color*/
+  cursor: pointer /* Add a mouse pointer on hover */
+  padding: 1em /* Some padding */
+  border-radius: 50% /* Rounded corners */
+  font-size: 1.5em /* Increase font size */
+#top:active
+  background-color: #555 /* Add a dark-grey background on hover */
+
+#header
+  font-family: DancingScript !important
+  color: #144085 !important
+  text-align: center
+  font-size: 4em
+  margin-bottom: 1em
+
+#contests
+  display: flex
+  flex-direction: column
+  align-items: stretch
+
+#footer
+  background-color: #212529
+  width: 100%
+  height: auto
+  padding: 0.5em
+  color: #868e96
+  font-size: 0.5em
+  text-align: center
+
+#aboutme
+  text-align: center
+  border-image-width: auto
+  border-color: #868e96
+  border-style: solid
+  border-radius: 0.5em
+
+.focus
+  background-color: #144085
+  color: white
+  font-family: Impact
+  font-weight: bold
+  font-size: 2em
+  margin-right: 3em
+  margin-bottom: 1em
+  padding: 0.5em
+
+.contest
+  font-size: 1.5em
+  color: #144085
+  font-weight: bold
+  margin-bottom: 0.5em
+  padding: 0.2em
+
+.contestext
+  font-size: 0.8em
+  color: black
+  font-weight: normal
+  padding: 0.2em
+
+.sticky
+  position: fixed !important
+  top: 0 !important
+  width: 100%
+  height: 10vh !important
+  background-color: white
+
+/* The side navigation menu
+
+.sidenav
+  height: 100%
+
+  /* 100% Full-height
+  width: 0
+
+  /* 0 width - change this with JavaScript
+  position: fixed
+
+  /* Stay in place
+  z-index: 98
+
+  /* Stay on top
+  top: 0
+
+  /* Stay at the top
+  left: 0
+  background-color: #144085
+
+  /* Black
+  overflow-x: hidden
+
+  /* Disable horizontal scroll
+  padding-top: 60px
+
+  /* Place content 60px from the top
+  transition: 0.5s
+
+  /* 0.5 second transition effect to slide in the sidenav
+
+  a
+    padding: 8px 8px 8px 32px
+    text-decoration: none
+    font-size: 25px
+    color: white
+    display: block
+    transition: 0.3s
+
+    &:hover
+      color: lightblue
+    &:active
+      color: lightblue
+
+  .closebtn
+    position: absolute
+    top: 0
+    right: 25px
+    font-size: 36px
+    margin-left: 50px
+
+#menuopen
+  font-size: 3em
+  color: #144085
+  position: fixed
+  top: 0
+  left: 1em
+  z-index: 97
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size)
+@media screen and (max-height: 450px)
+  .sidenav
+    padding-top: 15px
+
+    a
+      font-size: 18px

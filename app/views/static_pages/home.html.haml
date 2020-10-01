@@ -1,0 +1,85 @@
+%html{lang: "pl"}
+  %head
+    %title GAJDA2020
+    %meta{charset: "UTF-8"}
+    %meta{author: "Gerard Gajda"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+
+    %link{rel: 'stylesheet', href: 'https://unpkg.com/aos@2.3.1/dist/aos.css'}
+
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'static_pages', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tag
+
+  %body
+    #logo
+
+    #cover
+
+    #mySidenav.sidenav
+      %a.closebtn{href: "javascript:void(0)", onclick: "closeNav()"} &times;
+      = link_to "Strona Główna", "/"
+      = link_to "O mnie", "o-mnie"
+      = link_to "Aktualności", "aktualnosci"
+
+    %span#menuopen{onclick: "openNav()"} &#9776;
+
+    .container
+      .jumbotron#header{"data-aos" => "zoom-in-up"}
+        Naprzód Szkoło!
+
+    %button#top{onclick: "topFunction()"}
+      %i.fas.fa-arrow-up
+
+    #contests
+      %span.focus{"data-aos" => "fade-right"}
+        PIĄTKA GAJDY:
+      .contest{"data-aos" => "zoom-out-right"}
+        %i.far.fa-file-excel
+        %span Dzień bez kartkówki
+        %p.contestext
+          Jeden dzień w miesiącu, w którym nie będzie kartkówki
+      .contest{"data-aos" => "zoom-out-right"}
+        %i.fas.fa-mobile-alt
+        %span Dzień z telefonem
+        %p.contestext
+          Jeden dzień w miesiącu, w którym na przerwie będzie można korzystać z telefonu
+      .contest{"data-aos" => "zoom-out-right"}
+        %i.fas.fa-gamepad
+        %span Szkolna drużyna e-sportowa
+        %p.contestext
+          Szkolna drużyna w różnych grach np. League of Legends
+      .contest{"data-aos" => "zoom-out-right"}
+        %i.fas.fa-trophy
+        %span Przywrócenie Szkolnej Gali Talentów
+        %p.contestext
+          Przywrócenie Szkolnej Galu Talentów, przerwanej 2 lata temu
+      .contest{"data-aos" => "zoom-out-right"}
+        %i.fas.fa-user-tie
+        %span Dyżury Przewodniczącego
+        %p.contestext
+          Spotkania z przewodniczącym, podczas których będzie można podzielić się swoją opinią
+
+      %span#opis{"data-aos" => "flip-down", "data-aos-duration" => "2000"}
+        25 WRZEŚNIA GŁOSUJ NA ALBERTA GAJDĘ
+
+      #footer
+        &COPY; COPYRIGHT Gerard Gajda 2020
+
+    :javascript
+      function topFunction(){
+        document.getElementById("logo").classList.remove("sticky");
+        document.getElementById("top").style.display = "none";
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
